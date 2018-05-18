@@ -15,7 +15,10 @@ void selection_sort(int ar[], int size)
 			if (ar[min_id] > ar[j])
 				min_id = j;
 		}
-		swap(&ar[min_id], &ar[i]);
+		if (min_id != i)
+		{
+			swap(&ar[min_id], &ar[i]);
+		}
 	}
 	print_array(ar, size);
 }
