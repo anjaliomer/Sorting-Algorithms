@@ -11,7 +11,7 @@ void bubble_sort(int ar[], int size)
 
 	for (int i = 0; i < size - 1; i++)
 	{
-		ar[i] > ar[i + 1];
+		if(ar[i] > ar[i + 1])
 		swap(&ar[i], &ar[i + 1]);
 	}
 

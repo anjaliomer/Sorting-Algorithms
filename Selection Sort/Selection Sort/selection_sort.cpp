@@ -7,9 +7,10 @@ using namespace std;
 void selection_sort(int ar[], int size)
 {
 	print_array(ar, size);
+	int min_id;
 	for (int i = 0; i < size - 1;i++)
 	{
-		int min_id = i;
+		min_id = i;
 		for (int j = i + 1; j < size;j++)
 		{
 			if (ar[min_id] > ar[j])
