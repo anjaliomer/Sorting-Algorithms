@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{AE36FF09-9118-4066-8D7D-DEBDF1204962}</ProjectGuid>
+    <ProjectGuid>{EE3321F5-AD96-4397-8C99-C018FF6567A0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>IterativeQuickSort</RootNamespace>
+    <RootNamespace>QuickSortIterative</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

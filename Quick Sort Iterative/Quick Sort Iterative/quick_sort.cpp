@@ -6,13 +6,29 @@ using namespace std;
 
 void quick_sort(int ar[], int first, int last)
 {
-	int *stack = new[last-first+1];
+	int stack[10];
+	int top = -1;
 
-	int pi = partition(ar, first, last);
-		if(pi)
+	stack[++top] = first;
+	stack[++top] = last;
 
-	}
-	
+	while(top>=0)
+	{
+		last = stack[top--];
+		first = stack[top--];
+		int pi = partition(ar, first, last);
+
+		if (pi - 1 > first)
+		{
+			stack[++top] = first;
+			stack[++top] = pi - 1;
+		}
+		if (pi + 1 < last)
+		{
+			stack[++top] = pi + 1;
+			stack[++top] = last;
+		}
+    }
 }
 
 int partition(int ar[], int first, int last)
@@ -22,8 +38,11 @@ int partition(int ar[], int first, int last)
 	for (int j = first; j < last; j++)
 	{
 		if (ar[j] <= pivot)
+		{
 			i++;
-		swap(&ar[i], &ar[j]);
+			swap(&ar[i], &ar[j]);
+		}
+			
 	}
 	swap(&ar[i + 1], &ar[last]);
 	return (i + 1);
@@ -42,5 +61,3 @@ void print_array(int ar[], int size)
 		cout << ar[i] << " ";
 	cout << endl;
 }
-
-
